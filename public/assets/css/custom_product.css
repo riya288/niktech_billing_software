@@ -1,0 +1,55 @@
+#sidebar-menu ul ul a {
+  padding: 10px 20px 10px 50px !important;
+  font-size: 13px;
+}
+.topbar .topbar-left {
+  background: #083c66db !important;
+}
+body.fixed-left .side-menu.left {
+  background: #083c66 !important;
+}
+#sidebar-menu > ul > li > a.active {
+  color: #ffffff !important;
+  background-color: #5b86c0 !important;
+}
+#sidebar-menu > ul > li > a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #5b86c0 !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  border-radius: 10px;
+}
+
+
+#sidebar-menu > ul > li > a {
+
+  padding: 8px 7px !important;
+  margin: 0px 0 !important;
+}
+.menu-title {
+  font-size: 13px !important;
+  color: #98a6ad !important;
+
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  padding: 5px !important;
+  line-height: 1.42857143;
+
+  border-top: 1px solid #ddd;
+}
+

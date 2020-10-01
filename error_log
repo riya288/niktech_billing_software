@@ -1,0 +1,40 @@
+[13-Dec-2018 22:06:31 Asia/Kolkata] PHP Fatal error:  Class 'FlashMessages' not found in /home/deltaweb/public_html/demo/dw_124/admin/view_inquiry.php on line 5
+[13-Dec-2018 22:06:34 Asia/Kolkata] PHP Fatal error:  Class 'FlashMessages' not found in /home/deltaweb/public_html/demo/dw_124/admin/view_inquiry.php on line 5
+[13-Dec-2018 22:06:37 Asia/Kolkata] PHP Fatal error:  Class 'FlashMessages' not found in /home/deltaweb/public_html/demo/dw_124/admin/view_inquiry.php on line 5
+[13-Dec-2018 22:06:38 Asia/Kolkata] PHP Fatal error:  Class 'FlashMessages' not found in /home/deltaweb/public_html/demo/dw_124/admin/view_inquiry.php on line 5
+[01-May-2019 09:30:05 Asia/Kolkata] PHP Notice:  Undefined variable: la in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 3
+[01-May-2019 09:30:05 Asia/Kolkata] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user '
+gglfdrea_dancer'@'localhost' (using password: YES) in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 3
+[01-May-2019 09:30:05 Asia/Kolkata] PHP Notice:  Undefined variable: la in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 3
+[01-May-2019 09:30:05 Asia/Kolkata] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user '
+gglfdrea_dancer'@'localhost' (using password: YES) in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 3
+[01-May-2019 09:30:10 Asia/Kolkata] PHP Notice:  Undefined variable: la in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 3
+[01-May-2019 09:30:10 Asia/Kolkata] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user '
+gglfdrea_dancer'@'localhost' (using password: YES) in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 3
+[01-May-2019 09:30:10 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/gglfdrea/public_html/dancer_web/admin/login.php on line 21
+[01-May-2019 09:30:35 Asia/Kolkata] PHP Notice:  Undefined variable: la in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 3
+[01-May-2019 09:30:35 Asia/Kolkata] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user '
+gglfdrea_dancer'@'localhost' (using password: YES) in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 3
+[01-May-2019 09:30:48 Asia/Kolkata] PHP Notice:  Undefined variable: la in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 3
+[01-May-2019 09:30:48 Asia/Kolkata] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user '
+gglfdrea_dancer'@'localhost' (using password: YES) in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 3
+[01-May-2019 09:30:48 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/gglfdrea/public_html/dancer_web/admin/login.php on line 21
+[01-May-2019 09:31:59 Asia/Kolkata] PHP Notice:  Undefined variable: la in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 2
+[01-May-2019 09:31:59 Asia/Kolkata] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'gglfdrea_dancer'@'localhost' (using password: YES) in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 2
+[01-May-2019 09:31:59 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/gglfdrea/public_html/dancer_web/admin/login.php on line 21
+[01-May-2019 09:32:02 Asia/Kolkata] PHP Notice:  Undefined variable: la in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 2
+[01-May-2019 09:32:02 Asia/Kolkata] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'gglfdrea_dancer'@'localhost' (using password: YES) in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 2
+[01-May-2019 09:38:44 Asia/Kolkata] PHP Notice:  Undefined variable: la in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 2
+[01-May-2019 09:38:44 Asia/Kolkata] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'gglfdrea_dancer'@'localhost' (using password: YES) in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 2
+[01-May-2019 09:38:50 Asia/Kolkata] PHP Notice:  Undefined variable: la in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 2
+[01-May-2019 09:38:50 Asia/Kolkata] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'gglfdrea_dancer'@'localhost' (using password: YES) in /home/gglfdrea/public_html/dancer_web/admin/include/connection.php on line 2
+[01-May-2019 09:38:50 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/gglfdrea/public_html/dancer_web/admin/login.php on line 21
+[04-May-2019 14:27:48 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/gglfdrea/public_html/dancer_web/admin/home_slider.php on line 146
+[04-May-2019 14:28:01 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/gglfdrea/public_html/dancer_web/admin/home_slider.php on line 146
+[04-May-2019 15:56:52 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/gglfdrea/public_html/dancer_web/admin/view_gallery.php on line 73
+[04-May-2019 16:01:01 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/gglfdrea/public_html/dancer_web/admin/view_gallery.php on line 73
+[04-May-2019 18:29:50 Asia/Kolkata] PHP Warning:  require_once(view_event.php): failed to open stream: No such file or directory in /home/gglfdrea/public_html/dancer_web/admin/event.php on line 300
+[04-May-2019 18:29:50 Asia/Kolkata] PHP Fatal error:  require_once(): Failed opening required 'view_event.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gglfdrea/public_html/dancer_web/admin/event.php on line 300
+[04-May-2019 18:30:01 Asia/Kolkata] PHP Warning:  require_once(view_event.php): failed to open stream: No such file or directory in /home/gglfdrea/public_html/dancer_web/admin/event.php on line 300
+[04-May-2019 18:30:01 Asia/Kolkata] PHP Fatal error:  require_once(): Failed opening required 'view_event.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gglfdrea/public_html/dancer_web/admin/event.php on line 300
+[13-May-2019 23:01:26 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/voicesan/public_html/music/admin/index.php on line 13
