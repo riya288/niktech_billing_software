@@ -86,11 +86,13 @@
 table{
   align-content: center;
   border-collapse: collapse;
-  border-radius: 25px;
+   border-radius:25px;
+    -moz-border-radius:25px;
   width: 100%;
   height: 100%;
 }
 table, th, td{
+  border-radius: 25px;
   border: 1px solid #d8d8d8;
 }
 .p-10{

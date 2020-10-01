@@ -34,7 +34,7 @@ if (isset($_GET['hId']) && !empty($_GET['hId'])) {
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         $id = $row['id'];
-        $name = $row['name'];
+        $cname = $row['cname'];
     }
 }
 ?>
@@ -92,18 +92,18 @@ if (isset($_GET['hId']) && !empty($_GET['hId'])) {
 
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row card-box">
                             <div class="col-md-12">
                                 <div  id="Show_target_div">
                                     <form name="form" action="action/curency.php/" id="form" method="post"    enctype="multipart/form-data">
-                                        <div class="row card-box">
+                                        <div class="row">
                                             <div class="col-md-12 p-5">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="col-md-5">
                                                                 <div class="form-group">
-                                                                    <label class="form-label" for="name">Country name</label>
-                                                                    <input type="text" name="name" id="name" class="form-control" value="<?php if(isset($name) && !empty($name)) {echo $name;} ?>">
+                                                                    <label class="form-label" for="cname">Country name</label>
+                                                                    <input type="text" name="cname" id="cname" class="form-control" value="<?php if(isset($cname) && !empty($cname)) {echo $cname;} ?>">
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-2">

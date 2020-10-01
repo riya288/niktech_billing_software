@@ -197,7 +197,7 @@
                                  <div class="row">
                                   <div class="col-md-12">
                                     <div class="col-md-12 card-box">
-                                       <div class="col-md-9">
+                                       <div class="col-md-12">
                                           <div class="col-md-6">
                                              <div class="form-group">
                                                  <label for="tax">Select Tax<span class="text-danger">*</span></label>
@@ -224,7 +224,7 @@
                                                   $result = mysqli_query($connect, $query);
                                                   $i = 1;
                                                   while ($row = mysqli_fetch_assoc($result)) {?>
-                                                  <option value="<?php echo $row['name'];?>"><?php echo $row['name'];?></option>
+                                                  <option value="<?php echo $row['cname'];?>"><?php echo $row['cname'];?></option>
                                                   <?php
                                                     $i++;
                                                 }
@@ -300,13 +300,13 @@
                             <div class="row">
                                  <div class="col-md-12">
                                     <div class="col-md-12 card-box">
-                                       <div class="col-md-6">
+                                       <div class="col-md-4">
                                          
                                        </div>
                                        <div class="col-md-6 p-t-20">
                                           <div id="count"></div>
                                             <div class="form-group">
-                                              <div class="col-md-5 p-l-60">
+                                              <div class="col-md-6 p-l-60">
                                                   <label class="form-label" for="grand_total" style="font-weight: bold;font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grand Total:</label>
                                               </div>
                                               <div class="col-md-6">
@@ -315,7 +315,7 @@
                                             </div>
                                           </div>
                                           <div class="col-md-12">
-                                             <div class="col-md-11 p-r-80">
+                                             <div class="col-md-11 p-r-85">
                                                 <div class="form-group">
                                                    <label class="form-label" for="rs_word">Rupees in Words:</label>
                                                    <input type="text" name="rs_word" id="rs_word" class="form-control" value="<?php

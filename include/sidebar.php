@@ -18,11 +18,7 @@
                                 </ul>
                             </li>
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="glyphicon glyphicon-envelope"></i> <span>Estimate</span> </a>
-                                <ul class="list-unstyled">
-                                    <li><a href="bill.php">Create Estimate</a></li>
-                                    <li><a href="view_bill.php">View Estimate</a></li>
-                                </ul>
+                                <a href="view_bill.php" class="waves-effect"><i class="glyphicon glyphicon-envelope"></i> <span>Estimate</span> </a>
                             </li>
                              <!-- <li class="has_sub">
                                 <a href="mail.php" class="waves-effect"><i class="glyphicon glyphicon-envelope"></i> <span>Mail</span> </a>

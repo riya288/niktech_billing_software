@@ -17,16 +17,16 @@
           $query = "SELECT * FROM curency WHERE id = '$id'";
           $result = mysqli_query($connect, $query);
           if (mysqli_num_rows($result) > 0) {
-            $name = $_POST['name'];
+            $cname = $_POST['cname'];
             $symbol = $_POST['symbol'];
-              $queryUpdate = mysqli_query($connect,"UPDATE curency SET name='$name',symbol='$symbol',dt_updated='$date' WHERE id ='$id'");
+              $queryUpdate = mysqli_query($connect,"UPDATE curency SET cname='$cname',symbol='$symbol',dt_updated='$date' WHERE id ='$id'");
           }
           header('location: '.$location.'curency.php'); 
         }else{
-            $name = $_POST['name'];
+            $cname = $_POST['cname'];
           $symbol = $_POST['symbol'];
             
-          $query=mysqli_query($connect,"INSERT INTO curency( name,symbol,dt_created) VALUES ('$name','$symbol','$date')");
+          $query=mysqli_query($connect,"INSERT INTO curency( cname,symbol,dt_created) VALUES ('$cname','$symbol','$date')");
 
         }
     header('location: '.$location.'curency.php'); 

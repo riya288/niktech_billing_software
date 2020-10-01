@@ -56,7 +56,7 @@
               $tax =$_POST['tax'];
               $gst =$_POST['gst'];
               $grand_total= $_POST['grand_total'];
-              $cureny= $_POST['cureny'];
+              $curency= $_POST['curency'];
               $rs_word=$_POST['rs_word'];
               $queryUpdate = mysqli_query($connect,"UPDATE bill SET bill_to = '$bill_to',company='$company',address='$address',state_code='$state_code',gst_no='$gst_no',book_no='$book_no',invoice_date='$invoice_date',p_o_no='$p_o_no',description='$chk9',qty='$chk2',rate='$chk3',amount='$chk4',tax='$tax',gst='$gst',total='$grand_total',curency='$curency',rs_word='$rs_word',dt_updated='$dt_created' WHERE id ='$id'");
           }

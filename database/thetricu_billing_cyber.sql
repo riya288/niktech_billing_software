@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2020 at 10:36 AM
+-- Generation Time: Oct 01, 2020 at 07:44 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -44,22 +44,6 @@ INSERT INTO `admin` (`id`, `username`, `password`, `dt_created`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bank`
---
-
-CREATE TABLE `bank` (
-  `id` int(10) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `ac_no` varchar(25) NOT NULL,
-  `ac_name` varchar(255) NOT NULL,
-  `ifsc` varchar(255) NOT NULL,
-  `dt_created` datetime NOT NULL DEFAULT current_timestamp(),
-  `dt_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `bill`
 --
 
@@ -91,7 +75,7 @@ CREATE TABLE `bill` (
 --
 
 INSERT INTO `bill` (`id`, `bill_to`, `company`, `address`, `state_code`, `gst_no`, `book_no`, `invoice_date`, `p_o_no`, `description`, `qty`, `rate`, `amount`, `tax`, `gst`, `total`, `curency`, `rs_word`, `dt_created`, `dt_updated`) VALUES
-(45, '', '', '', '', '', '101', '0000-00-00', '', 'saree\n', '5\n', '5465\n', '27325\n', 'gst', '4918.5', '32243.5', 'india', 'Thirty Two Thousand Two Hundred and Forty Three ', '2020-10-01 01:18:37', '2020-10-01 07:48:37');
+(46, 'riyapate', 'nik tech solution', 'B-301, Samruddhi Complex, Near Geeta Khaman HouseBeside Makarpura depo', 'Central', '24BSPPP2356E1ZM', '103', '0000-00-00', '123456', 'website\napplication\n\n\n', '3\n2\n6\n5\n', '5999\n9999\n5465\n5465\n', '17997\n19998\n32790\n27325\n', 'GST', '17659.8', '115769.8', 'UK', 'One Lakhs Fifteen Thousand Seven Hundred and Sixty Nine ', '2020-10-01 06:10:10', '2020-10-01 03:57:59');
 
 -- --------------------------------------------------------
 
@@ -101,7 +85,7 @@ INSERT INTO `bill` (`id`, `bill_to`, `company`, `address`, `state_code`, `gst_no
 
 CREATE TABLE `curency` (
   `id` int(11) NOT NULL,
-  `name` varchar(1000) NOT NULL,
+  `cname` varchar(1000) NOT NULL,
   `symbol` varchar(10) NOT NULL,
   `dt_created` datetime NOT NULL DEFAULT current_timestamp(),
   `dt_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -111,8 +95,10 @@ CREATE TABLE `curency` (
 -- Dumping data for table `curency`
 --
 
-INSERT INTO `curency` (`id`, `name`, `symbol`, `dt_created`, `dt_updated`) VALUES
-(6, 'india', '₹', '2020-10-01 12:59:33', '2020-10-01 07:29:33');
+INSERT INTO `curency` (`id`, `cname`, `symbol`, `dt_created`, `dt_updated`) VALUES
+(7, 'India', '₹', '2020-10-01 06:07:28', '2020-10-01 12:37:28'),
+(8, 'UK', '$', '2020-10-01 06:07:40', '2020-10-01 12:37:40'),
+(9, 'xyz', '€', '2020-10-01 08:43:16', '2020-10-01 15:13:16');
 
 -- --------------------------------------------------------
 
@@ -135,8 +121,8 @@ CREATE TABLE `gst` (
 --
 
 INSERT INTO `gst` (`id`, `tax`, `cgst`, `sgst`, `total_gst`, `dt_created`, `dt_updated`) VALUES
-(10, 'gst', '9', '9', '18', '2020-09-30 02:43:01', '2020-09-30 09:13:01'),
-(11, 'non gst', '0', '0', '0', '2020-09-30 02:43:14', '2020-09-30 09:13:14');
+(12, 'GST', '9', '9', '18', '2020-10-01 06:06:59', '2020-10-01 12:36:59'),
+(13, 'non gst', '0', '0', '0', '2020-10-01 06:07:08', '2020-10-01 12:37:08');
 
 -- --------------------------------------------------------
 
@@ -156,7 +142,7 @@ CREATE TABLE `term_condition` (
 --
 
 INSERT INTO `term_condition` (`id`, `name`, `dt_created`, `dt_updated`) VALUES
-(1, 'dsadasd', '2020-09-30 12:34:37', '2020-09-29 21:27:02');
+(2, '<p>1) Nik tech solutio</p><p>2) Nik tech solution</p><p>3) Nik tech solution</p>', '2020-10-01 06:08:41', '2020-10-01 12:38:41');
 
 --
 -- Indexes for dumped tables
@@ -166,12 +152,6 @@ INSERT INTO `term_condition` (`id`, `name`, `dt_created`, `dt_updated`) VALUES
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bank`
---
-ALTER TABLE `bank`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -209,34 +189,28 @@ ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `bank`
---
-ALTER TABLE `bank`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `curency`
 --
 ALTER TABLE `curency`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `gst`
 --
 ALTER TABLE `gst`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `term_condition`
 --
 ALTER TABLE `term_condition`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

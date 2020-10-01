@@ -1,7 +1,7 @@
 
-                    <div class="row card-box">
+                    <div class="row">
                             <div class="col-md-12">
-                                <div class=" table-responsive">
+                                <div class=" table-responsive card-box">
                                     
                                     <table id="datatable-buttons" class="table table-striped table-bordered">
                                         <thead>
@@ -27,9 +27,9 @@
                                             <td><?php echo $i; ?></td>
                                             <td>
                                                 <?php
-                                                if(isset($row['name']) && !empty($row['name']))
+                                                if(isset($row['cname']) && !empty($row['cname']))
                                                 {
-                                                    echo $row['name']; 
+                                                    echo $row['cname']; 
                                                 }
                                                 ?>
                                             </td>

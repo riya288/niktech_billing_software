@@ -5,7 +5,7 @@ $plugins = "public/plugins/";
 
 $image = "../public/image/";
 
-$baseurl = 'http://'.$_SERVER['HTTP_HOST'].'/GIT-DEVELOPMENT/niktech_product_list/billing_software/';
+$baseurl = 'http://'.$_SERVER['HTTP_HOST'].'/GIT-DEVELOPMENT/niktech_product_list/niktech_billing_software/';
 $homelsiderimg = $baseurl.'/image/home_slider/';
 $homeminiblock = $baseurl.'/image/home_mini_block/';
 $homeblock = $baseurl.'/image/home-block/';

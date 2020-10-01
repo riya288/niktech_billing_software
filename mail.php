@@ -12,21 +12,11 @@ $datainserterror =0;
 $dataupdatesuccess = 0;
 $dataupdateerror = 0;
 
-if (isset($_GET['hId']) && !empty($_GET['hId'])) {
-    $id = input_validate($_GET['hId']);
-    $query = "SELECT * FROM mail WHERE id = '$id'";
-    $result = mysqli_query($connect, $query);
-    if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $id = $row['id'];
-        $mail_to = $row['mail_to'];
-        $cc = $row['cc'];
-        $bcc = $row['bcc'];
-        $subject = $row['subject'];
-        $message = $row['message'];
-
-    }
+if (isset($_GET['mId']) && !empty($_GET['mId'])) {
+    $id = input_validate($_GET['mId']);
+    
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -71,7 +61,7 @@ if (isset($_GET['hId']) && !empty($_GET['hId'])) {
                             <div class="col-sm-8">
                                     <div class="card-box m-t-20">
                                         <div class="">
-                                            <form role="form" id="form" action="action/mail.php" method="post">
+                                            <form role="form" id="form" action="action/mail.php?mail_id=<?php echo $id; ?>" method="post">
                                                 <div class="form-group">
                                                     <input type="email" value="" name="mail_to"  id="mail_to" class="form-control" placeholder="To">
                                                 </div>

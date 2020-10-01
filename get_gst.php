@@ -6,7 +6,7 @@ include_once('include/config.php');
   $result = mysqli_query($connect,"SELECT * FROM gst where tax='$category_id'");
 while($row = mysqli_fetch_array($result)) {
 ?>
-   <div class="col-md-5">
+   <div class="col-md-6 p-l-40">
     <div class="col-md-6"><label class="form-label" for="gst">GST&nbsp;&nbsp;&nbsp;@</label></div>
                                                 
     <div class="col-md-6" id="per_gst" style="border-bottom: 1px solid black;">&nbsp;<?php echo $row['total_gst'];?>
