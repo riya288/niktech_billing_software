@@ -17,7 +17,7 @@
 <?php
    if (isset($_GET['hId']) && !empty($_GET['hId'])) {
    $id = input_validate($_GET['hId']);
-   $query = "SELECT * FROM bill WHERE id = '$id'";
+   $query = "SELECT * FROM quotation WHERE id = '$id'";
    $result = mysqli_query($connect, $query);
    if (mysqli_num_rows($result) > 0) {
    $row = mysqli_fetch_assoc($result);
@@ -85,7 +85,7 @@
                <div class="row">
                   <div class="col-xs-12">
                      <div class="page-title-box">
-                        <h4 class="page-title">Billing DETAIL </h4>
+                        <h4 class="page-title">QUOTATION DETAIL </h4>
                         <ol class="breadcrumb p-0 m-0">
                            <li>
                               <a href="index.php">Home</a>
@@ -116,7 +116,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <div  id="Show_target_div">
-                        <form name="form" action="action/bill.php/" id="form" method="post"    enctype="multipart/form-data">
+                        <form name="form" action="action/quotation.php/" id="form" method="post"    enctype="multipart/form-data">
                            <div class="row card-box">
                               <div class="col-md-12">
                                  <div class="row">
@@ -163,7 +163,7 @@
                                           <div class="col-md-12">
                                              <div class="form-group">
                                                 <label>Invoice No.:</label>
-                                                <?php $query = "SELECT * FROM bill ORDER BY id DESC";  
+                                                <?php $query = "SELECT * FROM quotation ORDER BY id DESC";  
                                                    $result = mysqli_query($connect,$query); ?>
                                                 <input id="book_no" type="text" class="form-control"  name="book_no" value="<?php          
                                                    if(mysqli_num_rows($result)>0){

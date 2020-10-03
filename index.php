@@ -37,7 +37,7 @@
                         <div class="row">
 							<div class="col-xs-12">
 								<div class="page-title-box">
-                                    <h4 class="page-title">OM SECURITY ADMIN PANEL</h4>
+                                    <h4 class="page-title">NIK TECH ADMIN PANEL</h4>
                                     
                                     <div class="clearfix"></div>
                                 </div>
@@ -51,7 +51,7 @@
                                 <div class="card-box widget-box-two widget-two-primary">
                                     <i class="mdi mdi-layers widget-two-icon"></i>
                                     <div class="wigdet-two-content">
-                                        <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Total Employee</p><br>
+                                        <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Total Invoice</p><br>
                                         <h2><span data-plugin="counterup"><?= $count; ?> </span> <small><i class="mdi mdi-arrow-up text-success"></i></small></h2>
                                        
                                     </div>

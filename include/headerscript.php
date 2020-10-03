@@ -12,7 +12,7 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="<?php echo base_url; ?>images/tricube_img/logo.gif">
         <!-- App title -->
-        <title>Bill Book</title>
+        <title>Billing Software | Niktech Solution</title>
 
          <!-- App css -->
         <link href="<?php echo base_url; ?>public/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />

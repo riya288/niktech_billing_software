@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2020 at 07:44 PM
+-- Generation Time: Oct 03, 2020 at 03:32 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -55,12 +55,12 @@ CREATE TABLE `bill` (
   `state_code` varchar(25) NOT NULL,
   `gst_no` varchar(25) NOT NULL,
   `book_no` varchar(25) NOT NULL,
-  `invoice_date` date NOT NULL,
+  `invoice_date` varchar(255) NOT NULL,
   `p_o_no` varchar(25) NOT NULL,
   `description` mediumtext NOT NULL,
-  `qty` varchar(25) NOT NULL,
-  `rate` varchar(25) NOT NULL,
-  `amount` varchar(25) NOT NULL,
+  `qty` mediumtext NOT NULL,
+  `rate` mediumtext NOT NULL,
+  `amount` mediumtext NOT NULL,
   `tax` varchar(1000) NOT NULL,
   `gst` varchar(25) NOT NULL,
   `total` varchar(255) NOT NULL,
@@ -75,7 +75,8 @@ CREATE TABLE `bill` (
 --
 
 INSERT INTO `bill` (`id`, `bill_to`, `company`, `address`, `state_code`, `gst_no`, `book_no`, `invoice_date`, `p_o_no`, `description`, `qty`, `rate`, `amount`, `tax`, `gst`, `total`, `curency`, `rs_word`, `dt_created`, `dt_updated`) VALUES
-(46, 'riyapate', 'nik tech solution', 'B-301, Samruddhi Complex, Near Geeta Khaman HouseBeside Makarpura depo', 'Central', '24BSPPP2356E1ZM', '103', '0000-00-00', '123456', 'website\napplication\n\n\n', '3\n2\n6\n5\n', '5999\n9999\n5465\n5465\n', '17997\n19998\n32790\n27325\n', 'GST', '17659.8', '115769.8', 'UK', 'One Lakhs Fifteen Thousand Seven Hundred and Sixty Nine ', '2020-10-01 06:10:10', '2020-10-01 03:57:59');
+(48, 'mehul patel', 'Tricube', 'A TF- lotus aura sama savli road ', '389001', 'fdgdgd12', '105', '2020-10-02', '1500', '10 page website design\nHosting services\n', '1\n1\n', '100\n200\n', '100\n200\n', 'GST', '54', '354', 'India', 'Three Hundred and Fifty Four ', '2020-10-02 01:52:32', '2020-10-02 08:22:32'),
+(53, 'mehul patel', 'nik tech solution', 'B-301, Samruddhi Complex, Near Geeta Khaman HouseBeside Makarpura depo', 'Central', '24BSPPP2356E1ZM', '113', '0000-00-00', '123456', 'sdfsdf\nsdfsdf\nsdfsdf\ndrgftedrgtre\ndrgftedrgtre\ndrgftedrgtre\nsdfsdf\n', '6\n4\n6\n5\n4\n5\n5\n', '5465\n5465\n5465\n100\n5465\n1', '32790\n21860\n32790\n500\n218', 'GST', '20876.94', '136859.94', 'UK', 'One Lakhs Thirty Six Thousand Eight Hundred and Fifty Nine ', '2020-10-03 05:03:22', '2020-10-02 23:36:12');
 
 -- --------------------------------------------------------
 
@@ -122,7 +123,80 @@ CREATE TABLE `gst` (
 
 INSERT INTO `gst` (`id`, `tax`, `cgst`, `sgst`, `total_gst`, `dt_created`, `dt_updated`) VALUES
 (12, 'GST', '9', '9', '18', '2020-10-01 06:06:59', '2020-10-01 12:36:59'),
-(13, 'non gst', '0', '0', '0', '2020-10-01 06:07:08', '2020-10-01 12:37:08');
+(13, 'non gst', '0', '0', '0', '2020-10-01 06:07:08', '2020-10-01 20:25:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `id` int(10) NOT NULL,
+  `product` varchar(255) NOT NULL,
+  `rate` varchar(25) NOT NULL,
+  `dt_created` date NOT NULL DEFAULT current_timestamp(),
+  `dt_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `product`, `rate`, `dt_created`, `dt_updated`) VALUES
+(1, 'sdfsdf', '12222', '2020-10-03', '2020-10-03 06:06:13'),
+(2, 'drgftedrgtre', '12222', '2020-10-03', '2020-10-03 06:49:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quotation`
+--
+
+CREATE TABLE `quotation` (
+  `id` int(10) NOT NULL,
+  `bill_to` varchar(255) NOT NULL,
+  `company` varchar(255) NOT NULL,
+  `address` varchar(1000) NOT NULL,
+  `state_code` varchar(25) NOT NULL,
+  `gst_no` varchar(25) NOT NULL,
+  `book_no` varchar(25) NOT NULL,
+  `invoice_date` varchar(255) NOT NULL,
+  `p_o_no` varchar(25) NOT NULL,
+  `description` mediumtext NOT NULL,
+  `qty` mediumtext NOT NULL,
+  `rate` mediumtext NOT NULL,
+  `amount` mediumtext NOT NULL,
+  `tax` varchar(1000) NOT NULL,
+  `gst` varchar(25) NOT NULL,
+  `total` varchar(255) NOT NULL,
+  `curency` varchar(255) NOT NULL,
+  `rs_word` varchar(255) NOT NULL,
+  `dt_created` datetime NOT NULL DEFAULT current_timestamp(),
+  `dt_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `quotation`
+--
+
+INSERT INTO `quotation` (`id`, `bill_to`, `company`, `address`, `state_code`, `gst_no`, `book_no`, `invoice_date`, `p_o_no`, `description`, `qty`, `rate`, `amount`, `tax`, `gst`, `total`, `curency`, `rs_word`, `dt_created`, `dt_updated`) VALUES
+(48, 'mehul patel', 'Tricube', 'A TF- lotus aura sama savli road ', '389001', 'fdgdgd12', '105', '2020-10-02', '1500', '10 page website design\nHosting services\n', '1\n1\n', '100\n200\n', '100\n200\n', 'GST', '54', '354', 'India', 'Three Hundred and Fifty Four ', '2020-10-02 01:52:32', '2020-10-02 08:22:32'),
+(53, 'mehul patel', 'nik tech solution', 'B-301, Samruddhi Complex, Near Geeta Khaman HouseBeside Makarpura depo', 'Central', '24BSPPP2356E1ZM', '113', '0000-00-00', '123456', 'sdfsdf\nsdfsdf\nsdfsdf\ndrgftedrgtre\ndrgftedrgtre\ndrgftedrgtre\nsdfsdf\n', '6\n4\n6\n5\n4\n5\n5\n', '5465\n5465\n5465\n100\n5465\n1', '32790\n21860\n32790\n500\n218', 'GST', '20876.94', '136859.94', 'UK', 'One Lakhs Thirty Six Thousand Eight Hundred and Fifty Nine ', '2020-10-03 05:03:22', '2020-10-02 23:36:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `setting`
+--
+
+CREATE TABLE `setting` (
+  `id` int(10) NOT NULL,
+  `logo` varchar(1000) NOT NULL,
+  `bg` varchar(1000) NOT NULL,
+  `dt_created` datetime NOT NULL DEFAULT current_timestamp(),
+  `dt_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -173,6 +247,24 @@ ALTER TABLE `gst`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `quotation`
+--
+ALTER TABLE `quotation`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `setting`
+--
+ALTER TABLE `setting`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `term_condition`
 --
 ALTER TABLE `term_condition`
@@ -192,7 +284,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `curency`
@@ -205,6 +297,24 @@ ALTER TABLE `curency`
 --
 ALTER TABLE `gst`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `quotation`
+--
+ALTER TABLE `quotation`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+
+--
+-- AUTO_INCREMENT for table `setting`
+--
+ALTER TABLE `setting`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `term_condition`

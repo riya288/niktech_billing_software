@@ -11,7 +11,7 @@ $queryDeleteSccess = 0;
 $queryDeleteError = 0;
 if(isset($_GET['dId'])){
     $id = $_GET['dId'];
-    $query = "DELETE FROM bill WHERE id = '$id'";
+    $query = "DELETE FROM quotation WHERE id = '$id'";
       $result = mysqli_query($connect,$query);
 }
 ?>
@@ -43,7 +43,7 @@ if(isset($_GET['dId'])){
                         
                         <div class="row pull-right" style="padding: 10px 10px 40px 0;">
                             <div class="col-md-12">
-                                <a href="bill.php"><button class="btn btn-lg btn-primary" style="border-radius: 20px;">+&nbsp;&nbsp;Create New Estimate</button></a>
+                                <a href="quotation.php"><button class="btn btn-lg btn-primary" style="border-radius: 20px;">+&nbsp;&nbsp;Create New Estimate</button></a>
                             </div>
                         </div>
                     <div class="row">
@@ -64,7 +64,7 @@ if(isset($_GET['dId'])){
                                         </thead>
                                         <tbody>
                                         <?php 
-                                        $query = "SELECT * FROM bill ORDER BY id DESC";  
+                                        $query = "SELECT * FROM quotation ORDER BY id DESC";  
                                         $result = mysqli_query($connect,$query);
                                         if(mysqli_num_rows($result)>0)
                                         {
@@ -115,12 +115,12 @@ if(isset($_GET['dId'])){
                                                 ?>
                                             </td>
                                             <td>
-                                                <a href="get_pdf.php?pId=<?php if (isset($row['id']) &&
+                                                <a href="get_pdf2.php?pId=<?php if (isset($row['id']) &&
                                                         !empty($row['id'])) {echo $row['id'];} ?>" title="pdf">
                                                         <i class="fa fa-print" style="font-size: 20px;"></i>
                                                         </a>
                                                 
-                                                <a href="bill.php?hId=<?php if (isset($row['id']) &&
+                                                <a href="quotation.php?hId=<?php if (isset($row['id']) &&
                                                         !empty($row['id'])) {echo $row['id'];} ?>" title="Edit">
                                                         <i class="fa fa-edit" style="font-size: 20px;"></i>
                                                         </a>
@@ -128,7 +128,7 @@ if(isset($_GET['dId'])){
                                                         !empty($row['id'])) {echo $row['id'];} ?>" title="Mail">
                                                         <i class="mdi mdi-email"style="font-size: 20px;"></i>
                                                         </a>
-                                                 <a href="view_bill.php?dId=<?php if(isset($row['id']) && !empty($row['id'])){ echo $row['id']; }?>" onClick="return confirm('Are you sure you want to delete this record');" title="Delete">
+                                                 <a href="view_quotation.php?dId=<?php if(isset($row['id']) && !empty($row['id'])){ echo $row['id']; }?>" onClick="return confirm('Are you sure you want to delete this record');" title="Delete">
                                                             <i class="fa fa-trash" style="font-size: 20px;"></i>
                                                         </a>
                                             </td>

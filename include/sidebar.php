@@ -10,15 +10,19 @@
                                 <a href="index.php" class="waves-effect"><i class="ti-dashboard"></i><!-- <span class="label label-success pull-right"></span> --> <span> Dashboard </span> </a>
                             </li>
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="glyphicon glyphicon-envelope"></i> <span>Master</span> </a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="ti-layout-grid2"></i><span> Masters </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="gst.php">GST Texes</a></li>
                                     <li><a href="curency.php">Curency</a></li>
                                     <li><a href="term_condition.php">Term condition</a></li>
+                                    <li><a href="product.php">Add product</a></li>
                                 </ul>
                             </li>
                             <li class="has_sub">
                                 <a href="view_bill.php" class="waves-effect"><i class="glyphicon glyphicon-envelope"></i> <span>Estimate</span> </a>
+                            </li>
+                            <li class="has_sub">
+                                <a href="view_quotation.php" class="waves-effect"><i class="glyphicon glyphicon-envelope"></i> <span>Quotation</span> </a>
                             </li>
                              <!-- <li class="has_sub">
                                 <a href="mail.php" class="waves-effect"><i class="glyphicon glyphicon-envelope"></i> <span>Mail</span> </a>

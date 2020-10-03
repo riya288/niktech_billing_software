@@ -69,14 +69,22 @@ if(isset($_POST['submit'])){
 
       $subject = $_POST['subject'];
 
-      $message = $_POST['message'];
-
-       $query = "SELECT bill.*,gst.*,curency.*,term_condition.* FROM bill,gst,curency,term_condition ";
-        $peice =explode("\n",$description);
+              $peice =explode("\n",$description);
                $peice2 =explode("\n",$qty);
                $peice3 = explode("\n",$rate);
-               $peice4 = explode("\n", $tax);
                $peice5 = explode("\n", $amount);
+               $count = count($peice);
+               for ($i=0; $i < $count-1; $i++) { 
+                $j=$i+1;
+                $row .= '<tr>
+               <td style="width:5%;padding: 2px;text-align:center;">'.$j.'</td>
+               <td style="width:40%;padding: 2px;">'.$peice[$i].'</td>
+               <td style="width:10%;padding: 2px;text-align:center;">'.$peice2[$i].'</td>
+               <td style="width:15%;padding: 2px;text-align:right;">'.$symbol.'&nbsp;&nbsp;&nbsp;&nbsp;'.$peice3[$i].'</td>
+               <td style="width:15%;padding: 2px;text-align:center;">'.$tax.'</td>
+               <td style="width:20%;padding: 2px; text-align:right;">'.$symbol.'&nbsp;&nbsp;&nbsp;&nbsp;'.$peice5[$i].'</td>
+            </tr>';
+          }
 
         include 'email_pdf.php';
 

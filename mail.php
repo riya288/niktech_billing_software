@@ -78,9 +78,6 @@ if (isset($_GET['mId']) && !empty($_GET['mId'])) {
                                                     <div class="form-group">
                                                         <input type="text" value="" name="subject" class="form-control" placeholder="Subject">
                                                     </div>
-                                                    <div class="form-group">
-                                                        <textarea class="summernote" value="" name="message"> </textarea>
-                                                        </div>
 
                                                         <div class="btn form-group m-b-0">
                                                             <div class="pull-right">

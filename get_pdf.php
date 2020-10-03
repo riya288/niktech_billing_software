@@ -163,14 +163,24 @@
       <table style="padding:5px;margin-top: 10px;">
         
          <thead>
-            <th style="width:5%;padding: 2px;">Sr. No.</th>
+            <th style="width:5%;padding: 2px;text-align: center;">Sr. No.</th>
             <th style="width:40%;padding: 2px;">Description</th>
-            <th style="width:10%;padding: 2px;">Qty.</th>
-            <th style="width:15%;padding: 2px;">Rate</th>
-            <th style="width:15%;padding: 2px;">Tax</th>
-            <th style="width:20%;padding: 2px;">Amount</th>
+            <th style="width:10%;padding: 2px;text-align: center;">Qty.</th>
+            <th style="width:15%;padding: 2px;text-align: right;">Rate</th>
+            <th style="width:15%;padding: 2px;text-align: center;">Tax</th>
+            <th style="width:20%;padding: 2px;text-align: right;">Amount</th>
          </thead>
          <tbody>
+           <?php
+                  $query = "SELECT * FROM gst ";
+                  $result = mysqli_query($connect, $query);
+                  if (mysqli_num_rows($result) > 0) {
+                      $row = mysqli_fetch_assoc($result);
+                      $id = $row['id'];
+                      $total_gst = $row['total_gst'];
+                  }
+                  
+                  ?>
           <?php
                   $query = "SELECT * FROM curency WHERE cname = '$curency' ";
                   $result = mysqli_query($connect, $query);
@@ -191,19 +201,19 @@
                for ($i=0; $i < $count-1; $i++) { 
                ?>
             <tr>
-               <td style="width:5%;padding: 2px;"><?php echo $i+1?></td>
+               <td style="width:5%;padding: 2px;text-align: center;"><?php echo $i+1;?></td>
                <td style="width:40%;padding: 2px;"><?php echo $result[$i][0];?></td>
-               <td style="width:10%;padding: 2px;"><?php echo $result[$i][1];?></td>
-               <td style="width:15%;padding: 2px;"><?php echo $result[$i][2];?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $symbol;?></td>
-               <td style="width:15%;padding: 2px;"><?php echo $result[0][3];?></td>
-               <td style="width:20%;padding: 2px;"><?php echo $result[$i][4];?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $symbol;?></td>
+               <td style="width:10%;padding: 2px;text-align: center;"><?php echo $result[$i][1];?></td>
+               <td style="width:15%;padding: 2px;text-align: right;"><?php echo $symbol;?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $result[$i][2];?></td>
+               <td style="width:15%;padding: 2px;text-align: center;"><?php echo $result[0][3];?>(<?php echo $total_gst;?>%)</td>
+               <td style="width:20%;padding: 2px;text-align: right;"><?php echo $symbol;?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $result[$i][4];?></td>
             </tr>
             <?php
                }
                for($i=$count;$i<6;$i++){
                ?>
             <tr>
-               <td style="width:5%;padding: 2px;"><?php echo $i?></td>
+               <td style="width:5%;padding: 2px;text-align: center;"><?php echo $i?></td>
                <td style="width:40%;padding: 2px;"></td>
                <td style="width:10%;padding: 2px;"></td>
                <td style="width:15%;padding: 2px;"></td>
@@ -214,70 +224,47 @@
                }
                ?>
             <tr>
-               <?php
-                  $query = "SELECT * FROM gst ";
-                  $result = mysqli_query($connect, $query);
-                  if (mysqli_num_rows($result) > 0) {
-                      $row = mysqli_fetch_assoc($result);
-                      $id = $row['id'];
-                      $total_gst = $row['total_gst'];
-                  }
-                  
-                  ?>
+              
                <td rowspan="3" colspan="5">
                   <div class="row">
                      <div class="col-md-12 col-xs-12">
-                        <div class="col-md-9 col-xs-9" style="font-weight: bold;">BANK DETAILS:</div>
-                        
-                     </div>
+                        <div class="col-md-10 col-xs-10" style="font-weight: bold;padding-top: 5px;padding-bottom: 5px">BANK DETAILS:</div>
+                      <div class="col-md-2 col-xs-2">
+                           <div class="col-md-12 col-xs-12" style="padding-top: 10px;">GST&nbsp;@&nbsp;<?php echo $total_gst;?>&nbsp;%</div>
+                      </div>
+                    </div>
                   </div>
                   <div class="row">
                      <div class="col-md-12 col-xs-12">
-                        <div class="col-xs-9 col-md-9">
+                        <div class="col-xs-10 col-md-10">
                            <div class="row">
-                              <div class="col-md-4 col-xs-4">Bank Name&nbsp;:</div>
-                              <div class="col-md-5 col-xs-5"> Axis Bank</div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-4 col-xs-4">A/C No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
-                              <div class="col-md-5 col-xs-5"> 920020055689800</div>
+                              <div style="width:150px;display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bank Name&nbsp;:</div>
+                              <div style="width:150px;display: inline;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Axis Bank</div>
+                            
+                              <div style="width:150px;display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A/C No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
+                              <div style="width:150px;display: inline;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;920020055689800</div>
                            </div>
-                            <div class="row">
-                              <div class="col-md-4 col-xs-4">A/C Name&nbsp;&nbsp;&nbsp;:</div>
-                              <div class="col-md-5 col-xs-5"> Niktech Solution</div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-4 col-xs-4">IFSC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
-                              <div class="col-md-5 col-xs-5">UTIB0003818</div>
+                            <div class="row" style="padding-bottom: 5px;">
+                              <div style="width:150px;display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A/C Name&nbsp;&nbsp;&nbsp;:</div>
+                              <div style="width:150px;display: inline;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Niktech Solution</div>
+                            
+                              <div style="width:150px;display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IFSC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
+                              <div style="width:150px;display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UTIB0003818</div>
                            </div>
                         </div>
-                        <div class="col-md-3 col-xs-3">
-                           <div class="col-md-6 col-xs-6">GST@</div>
-                           <div class="col-md-6 col-xs-6 b-b-1_line"><?php echo $total_gst;?>%</div>
+                        <div class="col-md-2 col-xs-2">
+                           <div class="col-md-12 col-xs-12 pull-right" style="padding-top: 15px;text-align: right;">TOTAL</div>
                         </div>
-                        <div class="col-md-3 col-xs-3">
-                           <div class="col-md-6 col-xs-6"></div>
-                           <div class="col-md-6 col-xs-6">&nbsp;</div>
-                        </div>
-                        <div class="col-md-3 col-xs-3">
-                           <div class="col-md-12 col-xs-12 pull-right" style="font-weight: bold;text-align: right;">GRAND TOTAL</div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-md-12 col-xs-12">
-                        
-                        
                      </div>
                   </div>
                </td>
                <td style="text-align: center;"></td>
             </tr>
             <tr>
-               <td style="text-align: center;">&nbsp;<?php echo $gst;?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $symbol;?></td>
+               <td style="text-align: right;"><?php echo $symbol;?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $gst;?></td>
             </tr>
             <tr>
-               <td style="text-align: center;"><?php echo $total;?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $symbol;?></td>
+               <td style="text-align: right;"><?php echo $symbol;?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $total;?></td>
             </tr>
             <tr>
                <td colspan="6">
@@ -326,7 +313,7 @@
                </div>
             </div>
             <div class="row">
-               <div class="col-md-12 col-xs-12" style="font-weight: bold;">
+               <div class="col-md-12 col-xs-12 pull-bottom" style="font-weight: bold;">
                   <p>Proprietor</p>
                </div>
             </div>

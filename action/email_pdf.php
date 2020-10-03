@@ -129,79 +129,59 @@ $messaage='
       <table style="padding:5px;margin-top: 10px;">
         
          <thead>
-            <th style="width:5%;padding: 2px;">Sr. No.</th>
+            <th style="width:5%;padding: 2px;text-align:center;">Sr. No.</th>
             <th style="width:40%;padding: 2px;">Description</th>
-            <th style="width:10%;padding: 2px;">Qty.</th>
-            <th style="width:15%;padding: 2px;">Rate</th>
-            <th style="width:15%;padding: 2px;">Tax</th>
-            <th style="width:20%;padding: 2px;">Amount</th>
+            <th style="width:10%;padding: 2px;text-align:center;">Qty.</th>
+            <th style="width:15%;padding: 2px;text-align:right;">Rate</th>
+            <th style="width:15%;padding: 2px;text-align:center;">Tax</th>
+            <th style="width:20%;padding: 2px;text-align:right;">Amount</th>
          </thead>
-         <tbody>
+         <tbody>'.$row.'
+
                
-            <tr>
-               <td style="width:5%;padding: 2px;"></td>
-               <td style="width:40%;padding: 2px;">'.$result[$i][0].'</td>
-               <td style="width:10%;padding: 2px;">'.$result[$i][1].'</td>
-               <td style="width:15%;padding: 2px;">'.$result[$i][2].'&nbsp;&nbsp;&nbsp;&nbsp;'.$symbol.'</td>
-               <td style="width:15%;padding: 2px;">'.$result[0][3].'</td>
-               <td style="width:20%;padding: 2px;">'.$result[$i][4].'&nbsp;&nbsp;&nbsp;&nbsp;'.$symbol.'</td>
-            </tr>
+           
             <tr>
                
-               <td rowspan="3" colspan="5">
+                 <td rowspan="3" colspan="5">
                   <div class="row">
                      <div class="col-md-12 col-xs-12">
-                        <div class="col-md-9 col-xs-9" style="font-weight: bold;">BANK DETAILS:</div>
-                        
-                     </div>
+                        <div class="col-md-10 col-xs-10" style="font-weight: bold;padding-top: 5px;padding-bottom: 5px">BANK DETAILS:</div>
+                      <div class="col-md-2 col-xs-2">
+                           <div class="col-md-12 col-xs-12" style="padding-top: 10px;">GST&nbsp;@&nbsp;<?php echo $total_gst;?>&nbsp;%</div>
+                      </div>
+                    </div>
                   </div>
                   <div class="row">
                      <div class="col-md-12 col-xs-12">
-                        <div class="col-xs-9 col-md-9">
+                        <div class="col-xs-10 col-md-10">
                            <div class="row">
-                              <div class="col-md-4 col-xs-4">Bank Name&nbsp;:</div>
-                              <div class="col-md-5 col-xs-5"> Axis Bank</div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-4 col-xs-4">A/C No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
-                              <div class="col-md-5 col-xs-5"> 920020055689800</div>
+                              <div style="width:150px;display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bank Name&nbsp;:</div>
+                              <div style="width:150px;display: inline;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Axis Bank</div>
+                            
+                              <div style="width:150px;display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A/C No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
+                              <div style="width:150px;display: inline;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;920020055689800</div>
                            </div>
                             <div class="row">
-                              <div class="col-md-4 col-xs-4">A/C Name&nbsp;&nbsp;&nbsp;:</div>
-                              <div class="col-md-5 col-xs-5"> Niktech Solution</div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-4 col-xs-4">IFSC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
-                              <div class="col-md-5 col-xs-5">UTIB0003818</div>
+                              <div style="width:150px;display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A/C Name&nbsp;&nbsp;&nbsp;:</div>
+                              <div style="width:150px;display: inline;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Niktech Solution</div>
+                            
+                              <div style="width:150px;display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IFSC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
+                              <div style="width:150px;display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UTIB0003818</div>
                            </div>
                         </div>
-                        <div class="col-md-3 col-xs-3">
-                           <div class="col-md-6 col-xs-6">GST@</div>
-                           <div class="col-md-6 col-xs-6 b-b-1_line">'.$total_gst.'%</div>
+                        <div class="col-md-2 col-xs-2">
+                           <div class="col-md-12 col-xs-12 pull-right" style="padding-top: 20px">TOTAL</div>
                         </div>
-                        <div class="col-md-3 col-xs-3">
-                           <div class="col-md-6 col-xs-6"></div>
-                           <div class="col-md-6 col-xs-6">&nbsp;</div>
-                        </div>
-                        <div class="col-md-3 col-xs-3">
-                           <div class="col-md-12 col-xs-12 pull-right" style="font-weight: bold;text-align: right;">GRAND TOTAL</div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-md-12 col-xs-12">
-                        
-                        
                      </div>
                   </div>
                </td>
                <td style="text-align: center;"></td>
             </tr>
             <tr>
-               <td style="text-align: center;">&nbsp;'.$gst.'&nbsp;&nbsp;&nbsp;&nbsp;'.$symbol.'</td>
+               <td style="text-align: right;">'.$symbol.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$gst.'</td>
             </tr>
             <tr>
-               <td style="text-align: center;">'.$total.'&nbsp;&nbsp;&nbsp;&nbsp;'.$symbol.'</td>
+               <td style="text-align: right;">'.$symbol.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$total.'</td>
             </tr>
             <tr>
                <td colspan="6">
