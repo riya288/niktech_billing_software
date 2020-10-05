@@ -43,7 +43,7 @@ if(isset($_GET['dId'])){
                         
                         <div class="row pull-right" style="padding: 10px 10px 40px 0;">
                             <div class="col-md-12">
-                                <a href="quotation.php"><button class="btn btn-lg btn-primary" style="border-radius: 20px;">+&nbsp;&nbsp;Create New Estimate</button></a>
+                                <a href="quotation.php"><button class="btn btn-lg btn-primary" style="border-radius: 20px;">+&nbsp;&nbsp;Create New Quotation</button></a>
                             </div>
                         </div>
                     <div class="row">
@@ -124,7 +124,7 @@ if(isset($_GET['dId'])){
                                                         !empty($row['id'])) {echo $row['id'];} ?>" title="Edit">
                                                         <i class="fa fa-edit" style="font-size: 20px;"></i>
                                                         </a>
-                                                         <a href="mail.php?mId=<?php if (isset($row['id']) &&
+                                                         <a href="mail.php?qId=<?php if (isset($row['id']) &&
                                                         !empty($row['id'])) {echo $row['id'];} ?>" title="Mail">
                                                         <i class="mdi mdi-email"style="font-size: 20px;"></i>
                                                         </a>

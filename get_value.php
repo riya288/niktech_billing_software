@@ -10,13 +10,13 @@ while($row = mysqli_fetch_array($result)) {
       <input type="text" id="description" name="description[]" class="form-control count" value="<?php echo $row['product'];?>" />                           
   </td>
   <td style="padding:10px;">
-      <input type="text" id="qty" name="qty[]" class="form-control count" value="1" />
+      <input type="text" id="qty" name="qty[]" class="form-control count" value="0" />
   </td>
   <td style="padding:10px;">
       <input type="text" name="rate[]" id="rate" class="form-control count"  value="<?php echo $row['rate'];?>" />
   </td>
   <td style="padding:10px;">
-      <input type="text" name="amount[]" id="amount" class="form-control"  value="" readonly/>
+      <input type="text" name="amount[]" id="amount" class="form-control"  value="0" readonly/>
   </td>
    
 <?php 

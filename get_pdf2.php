@@ -6,7 +6,7 @@
    include_once('include/input_validation.php');
    if (isset($_GET['pId']) && !empty($_GET['pId'])) {
        $id = input_validate($_GET['pId']);
-       $query = "SELECT * FROM bill WHERE id = '$id'";
+       $query = "SELECT * FROM quotation WHERE id = '$id'";
        $result = mysqli_query($connect, $query);
        if (mysqli_num_rows($result) > 0) {
            $row = mysqli_fetch_assoc($result);
@@ -37,7 +37,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <title>Invoice Print</title>
+      <title>Quotation Print</title>
    </head>
    <style type="text/css">
       /* Both z-index are resolving recursive element containment */
@@ -97,7 +97,7 @@
          </div>
          <div class="col-md-8 col-xs-8">
             <div class="row">
-               <div class="col-md-8 col-xs-8 fwb f-20  m-b-16 pull-right blue-back" style="border-bottom-left-radius: 15px;"><span class="pull-right" >GST TAX INVOICE-<?php echo $book_no?></span></div>
+               <div class="col-md-8 col-xs-8 fwb f-20  m-b-16 pull-right blue-back" style="border-bottom-left-radius: 15px;"><span class="pull-right" >Quotation-<?php echo $book_no?></span></div>
             </div>
             <div class="row">
                <div class="pull-right" style="padding-right: 10px;">
@@ -145,11 +145,11 @@
          </div>
          <div class="col-md-4 col-xs-4" style="padding-left: 30px; padding-right: 30px;padding-top: 40px;">
             <div class="row" style="padding-top: 5px;">
-               <div style="width:40%; display:inline;">Invoice No. &nbsp;:</div>
+               <div style="width:40%; display:inline;">Quotation No. &nbsp;:</div>
                <div class="b-b-1_line" style="width:60%; display:inline; float: right;text-align: right;">&nbsp;<?php echo $book_no;?></div>
             </div>
             <div class="row" style="padding-top: 5px;">
-               <div style="width:40%; display:inline;">Invoice Date :</div>
+               <div style="width:40%; display:inline;">Quotation Date :</div>
                <div class="b-b-1_line" style="width:60%; display:inline; float: right;text-align: right;">&nbsp;<?php echo $invoice_date;?></div>
             </div>
             <div class="row" style="padding-top: 5px;">

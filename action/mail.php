@@ -35,6 +35,56 @@ if(isset($_POST['submit'])){
         $total = $row['total'];
         $curency = $row['curency'];
         $rs_word = $row['rs_word'];
+        $type = "INVOICE";
+    }
+    $query2 = "SELECT * FROM curency WHERE cname = '$curency'";
+    $result2 = mysqli_query($connect, $query2);
+    if (mysqli_num_rows($result2) > 0) {
+        $row2 = mysqli_fetch_assoc($result2);
+        $id = $row2['id'];
+        $symbol = $row2['symbol'];
+    }
+    $query3 = "SELECT * FROM gst WHERE tax = '$tax'";
+    $result3 = mysqli_query($connect, $query3);
+    if (mysqli_num_rows($result3) > 0) {
+        $row3 = mysqli_fetch_assoc($result3);
+        $id = $row3['id'];
+        $total_gst = $row3['total_gst'];
+    }
+    $query4 = "SELECT * FROM term_condition ";
+    $result4 = mysqli_query($connect, $query4);
+    if (mysqli_num_rows($result4) > 0) {
+        $row4 = mysqli_fetch_assoc($result4);
+        $id = $row4['id'];
+        $name = $row4['name'];
+    }
+}
+    if (isset($_GET['mail_id2']) && !empty($_GET['mail_id2'])) {
+    $id = input_validate($_GET['mail_id2']);
+    $query = "SELECT * FROM quotation WHERE id = '$id'";
+    $result = mysqli_query($connect, $query);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $id = $row['id'];
+        $bill_to = $row['bill_to'];
+        $company = $row['company'];
+        $address = $row['address'];
+        $state_code = $row['state_code'];
+        $gst_no = $row['gst_no'];
+        $book_no = $row['book_no'];
+        $orgDate = $row['invoice_date'];
+        $invoice_date = date("d-m-Y", strtotime($orgDate));
+        $p_o_no = $row['p_o_no'];
+        $description = $row['description'];
+        $qty = $row['qty'];
+        $rate = $row['rate'];
+        $amount = $row['amount'];
+        $tax = $row['tax'];
+        $gst = $row['gst'];
+        $total = $row['total'];
+        $curency = $row['curency'];
+        $rs_word = $row['rs_word'];
+        $type = "QUOTATION";
     }
     $query2 = "SELECT * FROM curency WHERE cname = '$curency'";
     $result2 = mysqli_query($connect, $query2);

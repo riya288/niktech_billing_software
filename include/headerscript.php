@@ -10,7 +10,7 @@
         <meta name="author" content="Coderthemes">
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="<?php echo base_url; ?>images/tricube_img/logo.gif">
+        <link rel="shortcut icon" href="<?php echo base_url; ?>images/fav.jpg">
         <!-- App title -->
         <title>Billing Software | Niktech Solution</title>
 

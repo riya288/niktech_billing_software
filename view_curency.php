@@ -1,7 +1,7 @@
 
-                    <div class="row">
+                    <div class="row card-box">
                             <div class="col-md-12">
-                                <div class=" table-responsive card-box">
+                                <div class=" table-responsive">
                                     
                                     <table id="datatable-buttons" class="table table-striped table-bordered">
                                         <thead>

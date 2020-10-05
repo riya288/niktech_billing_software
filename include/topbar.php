@@ -39,7 +39,7 @@
 
                                 <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list">
                                     <li><a href="change_password.php"><i class="ti-power-off m-r-5"></i> Forget Password</a></li>
-                                     <li><a href="setting.php"><i class="ti-power-off m-r-5"></i> Setting</a></li>
+                                     <!-- <li><a href="setting.php"><i class="ti-power-off m-r-5"></i> Setting</a></li> -->
                                     <li><a href="logout.php"><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                 </ul>
                             </li>

@@ -4,7 +4,7 @@ $messaage='
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <title>Print A4 Blog</title>
+      <title>'.$type.' Print</title>
    </head>
    <style type="text/css">
       /* Both z-index are resolving recursive element containment */
@@ -63,7 +63,7 @@ $messaage='
          </div>
          <div class="col-md-8 col-xs-8">
             <div class="row">
-               <div class="col-md-8 col-xs-8 fwb f-20  m-b-16 pull-right blue-back" style="border-bottom-left-radius: 15px;"><span class="pull-right" >GST TAX INVOICE-'.$book_no.'</span></div>
+               <div class="col-md-8 col-xs-8 fwb f-20  m-b-16 pull-right blue-back" style="border-bottom-left-radius: 15px;"><span class="pull-right" >GST TAX '.$type.'-'.$book_no.'</span></div>
             </div>
             <div class="row">
                <div class="pull-right" style="padding-right: 10px;">
@@ -147,7 +147,7 @@ $messaage='
                      <div class="col-md-12 col-xs-12">
                         <div class="col-md-10 col-xs-10" style="font-weight: bold;padding-top: 5px;padding-bottom: 5px">BANK DETAILS:</div>
                       <div class="col-md-2 col-xs-2">
-                           <div class="col-md-12 col-xs-12" style="padding-top: 10px;">GST&nbsp;@&nbsp;<?php echo $total_gst;?>&nbsp;%</div>
+                           <div class="col-md-12 col-xs-12" style="padding-top: 10px;">GST&nbsp;@&nbsp;'.$total_gst.'&nbsp;%</div>
                       </div>
                     </div>
                   </div>

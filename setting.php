@@ -4,17 +4,12 @@
 <body class="fixed-left">
 <!-- Begin page -->
 <div id="wrapper">
-
     <!-- Top Bar Start -->
     <?php require_once('include/topbar.php'); ?>
     <!-- Top Bar End -->
-
     <!-- ========== Left Sidebar Start ========== -->
     <?php require_once('include/sidebar.php'); ?>
     <!-- Left Sidebar End -->
-
-
-
     <!-- ============================================================== -->
     <!-- Start Page Content here -->
     <!-- ============================================================== -->
@@ -25,12 +20,8 @@
                 <div class="col-xs-12">
                     <h3 class="header-title m-t-0">Change Profile</h3>
                     <div class="card-box">
-
                         <div class="row">
                             <div class="col-sm-12 col-xs-12 col-md-6">
-
-
-
                                 <div class="p-20">
                                     <form role="form" data-parsley-validate="" novalidate="" action="action/setting.php" method="post">
 
@@ -38,7 +29,6 @@
                                             <label for="hori-pass1" class="col-sm-6 form-control-label">Add company Logo <span class="text-danger">*</span></label>
                                             <div class="col-sm-3">
                                                 <input type="file" name="logo" accept="image/*" onchange="loadFile(event)">
-
                                             </div>
                                             <div class="col-md-3">
                                                 <img id="output" style="height:80px;"/>
@@ -53,8 +43,7 @@
                                         <div class="form-group row">
                                             <label for="hori-pass1" class="col-sm-6 form-control-label">Change Login Background <span class="text-danger">*</span></label>
                                             <div class="col-sm-3">
-                                                <input type="file" name="bg" accept="image/*" onchange="loadFile1(event)">
-
+                                                <input type="file" name="login_Back" accept="image/*" onchange="loadFile1(event)">
                                             </div>
                                             <div class="col-md-3">
                                                 <img id="output1" style="height:80px;"/>
@@ -66,10 +55,6 @@
                                                 </script>
                                             </div>
                                         </div>
-
-
-
-
                                         <div class="form-group row">
                                             <div class="col-md-10">
                                                 <button type="submit" name="submit" class="btn btn-primary waves-effect waves-light pull-right" >
@@ -80,11 +65,9 @@
                                         </div>
                                     </form>
                                 </div>
-
                             </div>
                         </div>
                         <!-- end row -->
-
                     </div> <!-- end ard-box -->
                 </div>
 

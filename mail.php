@@ -16,6 +16,10 @@ if (isset($_GET['mId']) && !empty($_GET['mId'])) {
     $id = input_validate($_GET['mId']);
     
 }
+if (isset($_GET['qId']) && !empty($_GET['qId'])) {
+    $id2 = input_validate($_GET['qId']);
+    
+}
 
 ?>
 <!DOCTYPE html>
@@ -61,7 +65,9 @@ if (isset($_GET['mId']) && !empty($_GET['mId'])) {
                             <div class="col-sm-8">
                                     <div class="card-box m-t-20">
                                         <div class="">
-                                            <form role="form" id="form" action="action/mail.php?mail_id=<?php echo $id; ?>" method="post">
+                                            <form role="form" id="form" action="action/mail.php?<?php if (isset($_GET['mId']) && !empty($_GET['mId'])) { echo 'mail_id='.$id; }else{
+                                                    echo 'mail_id2='.$id2;
+                                            }  ?>" method="post">
                                                 <div class="form-group">
                                                     <input type="email" value="" name="mail_to"  id="mail_to" class="form-control" placeholder="To">
                                                 </div>

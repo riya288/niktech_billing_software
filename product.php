@@ -122,7 +122,6 @@ if (isset($_GET['hId']) && !empty($_GET['hId'])) {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
                                     </form>
                                 </div>
                             </div>
