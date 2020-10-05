@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2020 at 03:32 PM
+-- Generation Time: Oct 05, 2020 at 04:28 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -69,14 +69,6 @@ CREATE TABLE `bill` (
   `dt_created` datetime NOT NULL DEFAULT current_timestamp(),
   `dt_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `bill`
---
-
-INSERT INTO `bill` (`id`, `bill_to`, `company`, `address`, `state_code`, `gst_no`, `book_no`, `invoice_date`, `p_o_no`, `description`, `qty`, `rate`, `amount`, `tax`, `gst`, `total`, `curency`, `rs_word`, `dt_created`, `dt_updated`) VALUES
-(48, 'mehul patel', 'Tricube', 'A TF- lotus aura sama savli road ', '389001', 'fdgdgd12', '105', '2020-10-02', '1500', '10 page website design\nHosting services\n', '1\n1\n', '100\n200\n', '100\n200\n', 'GST', '54', '354', 'India', 'Three Hundred and Fifty Four ', '2020-10-02 01:52:32', '2020-10-02 08:22:32'),
-(53, 'mehul patel', 'nik tech solution', 'B-301, Samruddhi Complex, Near Geeta Khaman HouseBeside Makarpura depo', 'Central', '24BSPPP2356E1ZM', '113', '0000-00-00', '123456', 'sdfsdf\nsdfsdf\nsdfsdf\ndrgftedrgtre\ndrgftedrgtre\ndrgftedrgtre\nsdfsdf\n', '6\n4\n6\n5\n4\n5\n5\n', '5465\n5465\n5465\n100\n5465\n1', '32790\n21860\n32790\n500\n218', 'GST', '20876.94', '136859.94', 'UK', 'One Lakhs Thirty Six Thousand Eight Hundred and Fifty Nine ', '2020-10-03 05:03:22', '2020-10-02 23:36:12');
 
 -- --------------------------------------------------------
 
@@ -181,8 +173,7 @@ CREATE TABLE `quotation` (
 --
 
 INSERT INTO `quotation` (`id`, `bill_to`, `company`, `address`, `state_code`, `gst_no`, `book_no`, `invoice_date`, `p_o_no`, `description`, `qty`, `rate`, `amount`, `tax`, `gst`, `total`, `curency`, `rs_word`, `dt_created`, `dt_updated`) VALUES
-(48, 'mehul patel', 'Tricube', 'A TF- lotus aura sama savli road ', '389001', 'fdgdgd12', '105', '2020-10-02', '1500', '10 page website design\nHosting services\n', '1\n1\n', '100\n200\n', '100\n200\n', 'GST', '54', '354', 'India', 'Three Hundred and Fifty Four ', '2020-10-02 01:52:32', '2020-10-02 08:22:32'),
-(53, 'mehul patel', 'nik tech solution', 'B-301, Samruddhi Complex, Near Geeta Khaman HouseBeside Makarpura depo', 'Central', '24BSPPP2356E1ZM', '113', '0000-00-00', '123456', 'sdfsdf\nsdfsdf\nsdfsdf\ndrgftedrgtre\ndrgftedrgtre\ndrgftedrgtre\nsdfsdf\n', '6\n4\n6\n5\n4\n5\n5\n', '5465\n5465\n5465\n100\n5465\n1', '32790\n21860\n32790\n500\n218', 'GST', '20876.94', '136859.94', 'UK', 'One Lakhs Thirty Six Thousand Eight Hundred and Fifty Nine ', '2020-10-03 05:03:22', '2020-10-02 23:36:12');
+(54, '', '', '', '', '', '102', '', '', 'drgftedrgtre\ndrgftedrgtre\nsdfsdf\ndrgftedrgtre\ndrgftedrgtre\n', '1\n6\n6\n8\n6\n', '12222\n5465\n6777\n12222\n5465\n', '12222\n32790\n40662\n97776\n32790\n', 'GST', '38923.2', '255163.2', 'UK', 'Two Lakhs Fifty Five Thousand One Hundred and Sixty Three ', '2020-10-05 11:48:54', '2020-10-05 06:19:59');
 
 -- --------------------------------------------------------
 
@@ -192,10 +183,9 @@ INSERT INTO `quotation` (`id`, `bill_to`, `company`, `address`, `state_code`, `g
 
 CREATE TABLE `setting` (
   `id` int(10) NOT NULL,
-  `logo` varchar(1000) NOT NULL,
-  `bg` varchar(1000) NOT NULL,
-  `dt_created` datetime NOT NULL DEFAULT current_timestamp(),
-  `dt_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `logo` mediumtext NOT NULL,
+  `login_Back` mediumtext NOT NULL,
+  `created_dt` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -308,13 +298,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `quotation`
 --
 ALTER TABLE `quotation`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `term_condition`
